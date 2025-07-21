@@ -10,9 +10,9 @@ ENV REDIS_HOST="redis" \
     CATALOGUE_HOST="catalogue" \
     CATALOGUE_PORT="8080"
 WORKDIR /opt/server
-USER roboshop 
+USER roboshop
 COPY --from=builder /opt/server /opt/server
-CMD ["node", "server.js"]
+CMD ["node","server.js"]
 
 
 
