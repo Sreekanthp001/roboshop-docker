@@ -15,7 +15,6 @@ RUN apk add --no-cache \
     linux-headers && \
     pip install --upgrade pip && \
     pip install uwsgi && \
-    pip install
     pip install -r requirements.txt
 USER roboshop
 CMD [ "uwsgi", "--ini", "payment.ini"]
