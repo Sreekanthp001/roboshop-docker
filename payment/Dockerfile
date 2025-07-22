@@ -1,27 +1,3 @@
-# FROM python:3.9.23-alpine AS builder
-# WORKDIR /opt/server
-# COPY src /opt/server
-
-
-
-# FROM python:3.9.23-alpine
-# RUN addgroup -S -g 1001 roboshop && adduser -S -u 1001 -G roboshop roboshop
-# WORKDIR /opt/server
-# COPY --from=builder /opt/server /opt/server
-# RUN apk add --no-cache \
-#     gcc \
-#     musl-dev \
-#     python3-dev \
-#     libffi-dev \
-#     build-base \
-#     linux-headers && \
-#     pip install --upgrade pip && \
-#     pip install uwsgi && \
-#     pip install -r requirements.txt
-# USER roboshop
-# CMD [ "uwsgi", "--ini", "payment.ini"]
-
-
 # Stage 1: Build
 FROM python:3.9.23-alpine3.22 AS builder
 WORKDIR /build
