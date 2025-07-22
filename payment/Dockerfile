@@ -1,6 +1,6 @@
 FROM python:3.9.23-alpine AS builder
 WORKDIR /opt/server
-COPY ../src /opt/server
+COPY src /opt/server
 
 
 
